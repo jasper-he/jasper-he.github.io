@@ -1,13 +1,85 @@
 <!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
+
+
 
   
-  <title>I have a crush on you | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC] 3章: 3维刚体坐标变换3.1: eigenmatrix.cpp123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858">
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 3章: 3维刚体坐标变换3.1: eigenmatrix.cpp123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858">
 <meta property="og:type" content="article">
 <meta property="og:title" content="I have a crush on you">
 <meta property="og:url" content="http://yoursite.com/2019/05/16/I-have-a-crush-on-you/index.html">
@@ -18,75 +90,214 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I have a crush on you">
 <meta name="twitter:description" content="[TOC] 3章: 3维刚体坐标变换3.1: eigenmatrix.cpp123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-I-have-a-crush-on-you" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/16/I-have-a-crush-on-you/" class="article-date">
-  <time datetime="2019-05-16T09:30:11.000Z" itemprop="datePublished">2019-05-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      I have a crush on you
-    </h1>
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/05/16/I-have-a-crush-on-you/">
+
+
+
+
+
+  <title>I have a crush on you | Hexo</title>
   
 
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/16/I-have-a-crush-on-you/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">I have a crush on you</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-16T17:30:11+08:00">
+                2019-05-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry" itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <p>[TOC]</p>
 <h3 id="3章-3维刚体坐标变换"><a href="#3章-3维刚体坐标变换" class="headerlink" title="3章: 3维刚体坐标变换"></a>3章: 3维刚体坐标变换</h3><h4 id="3-1-eigenmatrix-cpp"><a href="#3-1-eigenmatrix-cpp" class="headerlink" title="3.1: eigenmatrix.cpp"></a>3.1: eigenmatrix.cpp</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="comment">// Eigen 部分</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Eigen/Core&gt;</span></span></span><br><span class="line"><span class="comment">// 稠密矩阵的代数运算（逆，特征值等）</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Eigen/Dense&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MATRIX_SIZE 50</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/****************************</span></span><br><span class="line"><span class="comment">* 本程序演示了 Eigen 基本类型的使用</span></span><br><span class="line"><span class="comment">****************************/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( <span class="keyword">int</span> argc, <span class="keyword">char</span>** argv )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// Eigen 中所有向量和矩阵都是Eigen::Matrix，它是一个模板类。它的前三个参数为：数据类型，行，列</span></span><br><span class="line">    <span class="comment">// 声明一个2*3的float矩阵</span></span><br><span class="line">    Eigen::Matrix&lt;<span class="keyword">float</span>, <span class="number">2</span>, <span class="number">3</span>&gt; matrix_23;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 同时，Eigen 通过 typedef 提供了许多内置类型，不过底层仍是Eigen::Matrix</span></span><br><span class="line">    <span class="comment">// 例如 Vector3d 实质上是 Eigen::Matrix&lt;double, 3, 1&gt;，即三维向量</span></span><br><span class="line">    Eigen::Vector3d v_3d;</span><br><span class="line">	<span class="comment">// 这是一样的</span></span><br><span class="line">    Eigen::Matrix&lt;<span class="keyword">float</span>,<span class="number">3</span>,<span class="number">1</span>&gt; vd_3d;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Matrix3d 实质上是 Eigen::Matrix&lt;double, 3, 3&gt;</span></span><br><span class="line">    Eigen::Matrix3d matrix_33 = Eigen::Matrix3d::Zero(); <span class="comment">//初始化为零</span></span><br><span class="line">    <span class="comment">// 如果不确定矩阵大小，可以使用动态大小的矩阵</span></span><br><span class="line">    Eigen::Matrix&lt; <span class="keyword">double</span>, Eigen::Dynamic, Eigen::Dynamic &gt; matrix_dynamic;</span><br><span class="line">    <span class="comment">// 更简单的</span></span><br><span class="line">    Eigen::MatrixXd matrix_x;</span><br><span class="line">    <span class="comment">// 这种类型还有很多，我们不一一列举</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 下面是对Eigen阵的操作</span></span><br><span class="line">    <span class="comment">// 输入数据（初始化）</span></span><br><span class="line">    matrix_23 &lt;&lt; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>;</span><br><span class="line">    <span class="comment">// 输出</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_23 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 用()访问矩阵中的元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;matrix_23(i,j)&lt;&lt;<span class="string">"\t"</span>;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 矩阵和向量相乘（实际上仍是矩阵和矩阵）</span></span><br><span class="line">    v_3d &lt;&lt; <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>;</span><br><span class="line">    vd_3d &lt;&lt; <span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>;</span><br><span class="line">    <span class="comment">// 但是在Eigen里你不能混合两种不同类型的矩阵，像这样是错的</span></span><br><span class="line">    <span class="comment">// Eigen::Matrix&lt;double, 2, 1&gt; result_wrong_type = matrix_23 * v_3d;</span></span><br><span class="line">    <span class="comment">// 应该显式转换</span></span><br><span class="line">    Eigen::Matrix&lt;<span class="keyword">double</span>, <span class="number">2</span>, <span class="number">1</span>&gt; result = matrix_23.cast&lt;<span class="keyword">double</span>&gt;() * v_3d;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; result &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    Eigen::Matrix&lt;<span class="keyword">float</span>, <span class="number">2</span>, <span class="number">1</span>&gt; result2 = matrix_23 * vd_3d;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; result2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 同样你不能搞错矩阵的维度</span></span><br><span class="line">    <span class="comment">// 试着取消下面的注释，看看Eigen会报什么错</span></span><br><span class="line">    <span class="comment">// Eigen::Matrix&lt;double, 2, 3&gt; result_wrong_dimension = matrix_23.cast&lt;double&gt;() * v_3d;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 一些矩阵运算</span></span><br><span class="line">    <span class="comment">// 四则运算就不演示了，直接用+-*/即可。</span></span><br><span class="line">    matrix_33 = Eigen::Matrix3d::Random();      <span class="comment">// 随机数矩阵</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_33 &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_33.transpose() &lt;&lt; <span class="built_in">endl</span>;      <span class="comment">// 转置</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_33.sum() &lt;&lt; <span class="built_in">endl</span>;            <span class="comment">// 各元素和</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_33.trace() &lt;&lt; <span class="built_in">endl</span>;          <span class="comment">// 迹</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="number">10</span>*matrix_33 &lt;&lt; <span class="built_in">endl</span>;               <span class="comment">// 数乘</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_33.inverse() &lt;&lt; <span class="built_in">endl</span>;        <span class="comment">// 逆</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; matrix_33.determinant() &lt;&lt; <span class="built_in">endl</span>;    <span class="comment">// 行列式</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 特征值</span></span><br><span class="line">    <span class="comment">// 实对称矩阵可以保证对角化成功</span></span><br><span class="line">    Eigen::SelfAdjointEigenSolver&lt;Eigen::Matrix3d&gt; eigen_solver ( matrix_33.transpose()*matrix_33 );</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Eigen values = \n"</span> &lt;&lt; eigen_solver.eigenvalues() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Eigen vectors = \n"</span> &lt;&lt; eigen_solver.eigenvectors() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 解方程</span></span><br><span class="line">    <span class="comment">// 我们求解 matrix_NN * x = v_Nd 这个方程</span></span><br><span class="line">    <span class="comment">// N的大小在前边的宏里定义，它由随机数生成</span></span><br><span class="line">    <span class="comment">// 直接求逆自然是最直接的，但是求逆运算量大</span></span><br><span class="line"></span><br><span class="line">    Eigen::Matrix&lt; <span class="keyword">double</span>, MATRIX_SIZE, MATRIX_SIZE &gt; matrix_NN;</span><br><span class="line">    matrix_NN = Eigen::MatrixXd::Random( MATRIX_SIZE, MATRIX_SIZE );</span><br><span class="line">    Eigen::Matrix&lt; <span class="keyword">double</span>, MATRIX_SIZE,  <span class="number">1</span>&gt; v_Nd;</span><br><span class="line">    v_Nd = Eigen::MatrixXd::Random( MATRIX_SIZE,<span class="number">1</span> );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">clock_t</span> time_stt = clock(); <span class="comment">// 计时</span></span><br><span class="line">    <span class="comment">// 直接求逆</span></span><br><span class="line">    Eigen::Matrix&lt;<span class="keyword">double</span>,MATRIX_SIZE,<span class="number">1</span>&gt; x = matrix_NN.inverse()*v_Nd;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="string">"time use in normal inverse is "</span> &lt;&lt; <span class="number">1000</span>* (clock() - time_stt)/(<span class="keyword">double</span>)CLOCKS_PER_SEC &lt;&lt; <span class="string">"ms"</span>&lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    </span><br><span class="line">	<span class="comment">// 通常用矩阵分解来求，例如QR分解，速度会快很多</span></span><br><span class="line">    time_stt = clock();</span><br><span class="line">    x = matrix_NN.colPivHouseholderQr().solve(v_Nd);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt;<span class="string">"time use in Qr decomposition is "</span> &lt;&lt;<span class="number">1000</span>*  (clock() - time_stt)/(<span class="keyword">double</span>)CLOCKS_PER_SEC &lt;&lt;<span class="string">"ms"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -111,103 +322,353 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/16/I-have-a-crush-on-you/" data-id="cjvqkti3400014irz299jtjsa" class="article-share-link">Share</a>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/16/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
       
       
     </footer>
   </div>
   
-    
-<nav id="article-nav">
   
   
-    <a href="/2019/05/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+  </article>
 
-  
-</article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    <div class="post-spread">
+      
     </div>
   </div>
 
 
+          </div>
+          
+
+
+          
+
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
+
+
+
+        </div>
         
-          <li>
-            <a href="/2019/05/16/I-have-a-crush-on-you/">I have a crush on you</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/16/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
 
-  
-</aside>
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#3章-3维刚体坐标变换"><span class="nav-number">1.</span> <span class="nav-text">3章: 3维刚体坐标变换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-eigenmatrix-cpp"><span class="nav-number">1.1.</span> <span class="nav-text">3.1: eigenmatrix.cpp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-eigenGeometry"><span class="nav-number">1.2.</span> <span class="nav-text">3.2: eigenGeometry</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-visualizeGeometry"><span class="nav-number">1.3.</span> <span class="nav-text">3.3: visualizeGeometry</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4章：李群李代数"><span class="nav-number">2.</span> <span class="nav-text">4章：李群李代数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-useSophus"><span class="nav-number">2.1.</span> <span class="nav-text">4.1: useSophus</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5章：相机模型"><span class="nav-number">3.</span> <span class="nav-text">5章：相机模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-imageBasics"><span class="nav-number">3.1.</span> <span class="nav-text">5.1: imageBasics</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-joinmap"><span class="nav-number">3.2.</span> <span class="nav-text">5.2: joinmap</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六章：优化理论"><span class="nav-number">4.</span> <span class="nav-text">六章：优化理论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-ceres"><span class="nav-number">4.1.</span> <span class="nav-text">6.1: ceres</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-g2o"><span class="nav-number">4.2.</span> <span class="nav-text">6.2: g2o</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7章：VO"><span class="nav-number">5.</span> <span class="nav-text">7章：VO</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-Extra-cpp"><span class="nav-number">5.1.</span> <span class="nav-text">7.1: Extra.cpp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-feature-extract-cpp"><span class="nav-number">5.2.</span> <span class="nav-text">7.2: feature_extract.cpp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-Pose-estimation-2d2d-cpp"><span class="nav-number">5.3.</span> <span class="nav-text">7.3: Pose_estimation_2d2d.cpp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-Pose-extimation-3d2d-cpp"><span class="nav-number">5.4.</span> <span class="nav-text">7.4: Pose_extimation_3d2d.cpp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-5-Pose-estimation-3d3d-cpp"><span class="nav-number">5.5.</span> <span class="nav-text">7.5: Pose_estimation_3d3d.cpp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-6-Triangulation-cpp"><span class="nav-number">5.6.</span> <span class="nav-text">7.6: Triangulation.cpp</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8章：VO2"><span class="nav-number">6.</span> <span class="nav-text">8章：VO2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-sdirectMethod"><span class="nav-number">6.1.</span> <span class="nav-text">8.1: sdirectMethod</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#direct-semidense-cpp"><span class="nav-number">6.1.1.</span> <span class="nav-text">direct_semidense.cpp</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sparse-cpp"><span class="nav-number">6.1.2.</span> <span class="nav-text">sparse.cpp</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-      <footer id="footer">
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
+    
 
   </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
